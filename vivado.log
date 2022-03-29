@@ -2,10 +2,10 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Tue Feb 22 15:14:06 2022
-# Process ID: 3380
+# Start of session at: Tue Mar 15 11:28:51 2022
+# Process ID: 4320
 # Current directory: C:/PIPNP
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4628 C:\PIPNP\PIPNP.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10344 C:\PIPNP\PIPNP.xpr
 # Log file: C:/PIPNP/vivado.log
 # Journal file: C:/PIPNP\vivado.jou
 # Running On: DESKTOP-U31JS6B, OS: Windows, CPU Frequency: 2808 MHz, CPU Physical cores: 4, Host memory: 17021 MB
@@ -27,10 +27,273 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 avail
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld_es:part0:1.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/es/1.0/board.xml as part xczu59dr-ffvf1760-2-i-es1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:1.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/1.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
 INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/PIPNP/PIPNP.gen/sources_1'.
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/PIPNP/PIPNP.ip_user_files'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.2/data/ip'.
-open_project: Time (s): cpu = 00:00:35 ; elapsed = 00:00:14 . Memory (MB): peak = 1419.262 ; gain = 0.000
+open_project: Time (s): cpu = 00:00:37 ; elapsed = 00:00:15 . Memory (MB): peak = 1419.633 ; gain = 0.000
 update_compile_order -fileset sources_1
+add_files -norecurse {C:/PIPNP/PIPNP.srcs/sources_1/sound_channel_mix.v C:/PIPNP/PIPNP.srcs/sources_1/regfile.v C:/PIPNP/PIPNP.srcs/sources_1/serial.v C:/PIPNP/PIPNP.srcs/sources_1/brom.v C:/PIPNP/PIPNP.srcs/sources_1/singleport_ram.v C:/PIPNP/PIPNP.srcs/sources_1/clk_div.v C:/PIPNP/PIPNP.srcs/sources_1/sound_vol_env.v C:/PIPNP/PIPNP.srcs/sources_1/timer.v C:/PIPNP/PIPNP.srcs/sources_1/sound_square.v C:/PIPNP/PIPNP.srcs/sources_1/sound_noise.v C:/PIPNP/PIPNP.srcs/sources_1/alu.v C:/PIPNP/PIPNP.srcs/sources_1/mbc5.v C:/PIPNP/PIPNP.srcs/sources_1/singlereg.v C:/PIPNP/PIPNP.srcs/sources_1/sound.v C:/PIPNP/PIPNP.srcs/sources_1/control.v C:/PIPNP/PIPNP.srcs/sources_1/ppu.v C:/PIPNP/PIPNP.srcs/sources_1/common.v C:/PIPNP/PIPNP.srcs/sources_1/sound_length_ctr.v C:/PIPNP/PIPNP.srcs/sources_1/boy.v C:/PIPNP/PIPNP.srcs/sources_1/cpu.v C:/PIPNP/PIPNP.srcs/sources_1/sound_wave.v C:/PIPNP/PIPNP.srcs/sources_1/dma.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files {{C:/PIPNP/PIPNP.srcs/sources_1/new/top level module.v}}] -no_script -reset -force -quiet
+remove_files  {{C:/PIPNP/PIPNP.srcs/sources_1/new/top level module.v}}
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z020clg484-1
+Top: boy
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2023.969 ; gain = 335.926
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'boy' [C:/PIPNP/PIPNP.srcs/sources_1/boy.v:20]
+INFO: [Synth 8-6157] synthesizing module 'cpu' [C:/PIPNP/PIPNP.srcs/sources_1/cpu.v:18]
+INFO: [Synth 8-6157] synthesizing module 'control' [C:/PIPNP/PIPNP.srcs/sources_1/control.v:18]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/PIPNP/PIPNP.srcs/sources_1/control.v:209]
+INFO: [Synth 8-6155] done synthesizing module 'control' (1#1) [C:/PIPNP/PIPNP.srcs/sources_1/control.v:18]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/PIPNP/PIPNP.srcs/sources_1/regfile.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (2#1) [C:/PIPNP/PIPNP.srcs/sources_1/regfile.v:17]
+INFO: [Synth 8-6157] synthesizing module 'singlereg' [C:/PIPNP/PIPNP.srcs/sources_1/singlereg.v:17]
+	Parameter WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'singlereg' (3#1) [C:/PIPNP/PIPNP.srcs/sources_1/singlereg.v:17]
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/PIPNP/PIPNP.srcs/sources_1/alu.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (4#1) [C:/PIPNP/PIPNP.srcs/sources_1/alu.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'cpu' (5#1) [C:/PIPNP/PIPNP.srcs/sources_1/cpu.v:18]
+INFO: [Synth 8-6157] synthesizing module 'dma' [C:/PIPNP/PIPNP.srcs/sources_1/dma.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'dma' (6#1) [C:/PIPNP/PIPNP.srcs/sources_1/dma.v:24]
+INFO: [Synth 8-6157] synthesizing module 'ppu' [C:/PIPNP/PIPNP.srcs/sources_1/ppu.v:53]
+INFO: [Synth 8-6157] synthesizing module 'singleport_ram' [C:/PIPNP/PIPNP.srcs/sources_1/singleport_ram.v:2]
+	Parameter WORDS bound to: 8192 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'singleport_ram' (7#1) [C:/PIPNP/PIPNP.srcs/sources_1/singleport_ram.v:2]
+WARNING: [Synth 8-567] referenced signal 'obj_trigger_list' should be on the sensitivity list [C:/PIPNP/PIPNP.srcs/sources_1/ppu.v:379]
+WARNING: [Synth 8-567] referenced signal 'obj_valid_list' should be on the sensitivity list [C:/PIPNP/PIPNP.srcs/sources_1/ppu.v:379]
+INFO: [Synth 8-251] Invalid state! [C:/PIPNP/PIPNP.srcs/sources_1/ppu.v:569]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/PIPNP/PIPNP.srcs/sources_1/ppu.v:796]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/PIPNP/PIPNP.srcs/sources_1/ppu.v:831]
+INFO: [Synth 8-6155] done synthesizing module 'ppu' (8#1) [C:/PIPNP/PIPNP.srcs/sources_1/ppu.v:53]
+INFO: [Synth 8-6157] synthesizing module 'timer' [C:/PIPNP/PIPNP.srcs/sources_1/timer.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'timer' (9#1) [C:/PIPNP/PIPNP.srcs/sources_1/timer.v:16]
+INFO: [Synth 8-6157] synthesizing module 'serial' [C:/PIPNP/PIPNP.srcs/sources_1/serial.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'serial' (10#1) [C:/PIPNP/PIPNP.srcs/sources_1/serial.v:16]
+INFO: [Synth 8-6157] synthesizing module 'sound' [C:/PIPNP/PIPNP.srcs/sources_1/sound.v:21]
+WARNING: [Synth 8-567] referenced signal 'addr_in_regs' should be on the sensitivity list [C:/PIPNP/PIPNP.srcs/sources_1/sound.v:133]
+WARNING: [Synth 8-567] referenced signal 'sound_enable' should be on the sensitivity list [C:/PIPNP/PIPNP.srcs/sources_1/sound.v:133]
+WARNING: [Synth 8-567] referenced signal 'ch4_on_flag' should be on the sensitivity list [C:/PIPNP/PIPNP.srcs/sources_1/sound.v:133]
+WARNING: [Synth 8-567] referenced signal 'ch3_on_flag' should be on the sensitivity list [C:/PIPNP/PIPNP.srcs/sources_1/sound.v:133]
+WARNING: [Synth 8-567] referenced signal 'ch2_on_flag' should be on the sensitivity list [C:/PIPNP/PIPNP.srcs/sources_1/sound.v:133]
+WARNING: [Synth 8-567] referenced signal 'ch1_on_flag' should be on the sensitivity list [C:/PIPNP/PIPNP.srcs/sources_1/sound.v:133]
+WARNING: [Synth 8-567] referenced signal 'regs' should be on the sensitivity list [C:/PIPNP/PIPNP.srcs/sources_1/sound.v:133]
+WARNING: [Synth 8-567] referenced signal 'reg_addr' should be on the sensitivity list [C:/PIPNP/PIPNP.srcs/sources_1/sound.v:133]
+WARNING: [Synth 8-567] referenced signal 'addr_in_wave' should be on the sensitivity list [C:/PIPNP/PIPNP.srcs/sources_1/sound.v:133]
+WARNING: [Synth 8-567] referenced signal 'wave_addr' should be on the sensitivity list [C:/PIPNP/PIPNP.srcs/sources_1/sound.v:133]
+INFO: [Synth 8-6157] synthesizing module 'clk_div' [C:/PIPNP/PIPNP.srcs/sources_1/clk_div.v:17]
+	Parameter WIDTH bound to: 15 - type: integer 
+	Parameter DIV bound to: 8192 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clk_div' (11#1) [C:/PIPNP/PIPNP.srcs/sources_1/clk_div.v:17]
+INFO: [Synth 8-6157] synthesizing module 'clk_div__parameterized0' [C:/PIPNP/PIPNP.srcs/sources_1/clk_div.v:17]
+	Parameter WIDTH bound to: 2 - type: integer 
+	Parameter DIV bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clk_div__parameterized0' (11#1) [C:/PIPNP/PIPNP.srcs/sources_1/clk_div.v:17]
+INFO: [Synth 8-6157] synthesizing module 'sound_square' [C:/PIPNP/PIPNP.srcs/sources_1/sound_square.v:24]
+INFO: [Synth 8-6157] synthesizing module 'sound_vol_env' [C:/PIPNP/PIPNP.srcs/sources_1/sound_vol_env.v:16]
+WARNING: [Synth 8-7137] Register target_vol_reg in module sound_vol_env has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/PIPNP/PIPNP.srcs/sources_1/sound_vol_env.v:32]
+WARNING: [Synth 8-7137] Register enve_left_reg in module sound_vol_env has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/PIPNP/PIPNP.srcs/sources_1/sound_vol_env.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'sound_vol_env' (12#1) [C:/PIPNP/PIPNP.srcs/sources_1/sound_vol_env.v:16]
+INFO: [Synth 8-6157] synthesizing module 'sound_length_ctr' [C:/PIPNP/PIPNP.srcs/sources_1/sound_length_ctr.v:16]
+	Parameter WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sound_length_ctr' (13#1) [C:/PIPNP/PIPNP.srcs/sources_1/sound_length_ctr.v:16]
+INFO: [Synth 8-6157] synthesizing module 'sound_channel_mix' [C:/PIPNP/PIPNP.srcs/sources_1/sound_channel_mix.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'sound_channel_mix' (14#1) [C:/PIPNP/PIPNP.srcs/sources_1/sound_channel_mix.v:21]
+WARNING: [Synth 8-7137] Register divider_reg in module sound_square has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/PIPNP/PIPNP.srcs/sources_1/sound_square.v:58]
+WARNING: [Synth 8-7137] Register octo_freq_out_reg in module sound_square has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/PIPNP/PIPNP.srcs/sources_1/sound_square.v:62]
+WARNING: [Synth 8-7137] Register target_freq_reg in module sound_square has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/PIPNP/PIPNP.srcs/sources_1/sound_square.v:88]
+WARNING: [Synth 8-7137] Register sweep_left_reg in module sound_square has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/PIPNP/PIPNP.srcs/sources_1/sound_square.v:89]
+INFO: [Synth 8-6155] done synthesizing module 'sound_square' (15#1) [C:/PIPNP/PIPNP.srcs/sources_1/sound_square.v:24]
+INFO: [Synth 8-6157] synthesizing module 'sound_wave' [C:/PIPNP/PIPNP.srcs/sources_1/sound_wave.v:17]
+INFO: [Synth 8-6157] synthesizing module 'sound_length_ctr__parameterized0' [C:/PIPNP/PIPNP.srcs/sources_1/sound_length_ctr.v:16]
+	Parameter WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sound_length_ctr__parameterized0' (15#1) [C:/PIPNP/PIPNP.srcs/sources_1/sound_length_ctr.v:16]
+WARNING: [Synth 8-7137] Register divider_reg in module sound_wave has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/PIPNP/PIPNP.srcs/sources_1/sound_wave.v:56]
+WARNING: [Synth 8-7137] Register clk_pointer_inc_reg in module sound_wave has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/PIPNP/PIPNP.srcs/sources_1/sound_wave.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'sound_wave' (16#1) [C:/PIPNP/PIPNP.srcs/sources_1/sound_wave.v:17]
+INFO: [Synth 8-6157] synthesizing module 'sound_noise' [C:/PIPNP/PIPNP.srcs/sources_1/sound_noise.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'sound_noise' (17#1) [C:/PIPNP/PIPNP.srcs/sources_1/sound_noise.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'sound' (18#1) [C:/PIPNP/PIPNP.srcs/sources_1/sound.v:21]
+INFO: [Synth 8-6157] synthesizing module 'brom' [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:22]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'bootrom.mif'; please make sure the file is added to project and has read permission, ignoring [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:30]
+WARNING: [Synth 8-4767] Trying to implement RAM ' ' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+WARNING: [Synth 8-3848] Net brom_array in module/entity brom does not have driver. [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:27]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'brom' (19#1) [C:/PIPNP/PIPNP.srcs/sources_1/brom.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'boy' (20#1) [C:/PIPNP/PIPNP.srcs/sources_1/boy.v:20]
+WARNING: [Synth 8-7129] Port clk in module sound_square is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd in module sound is either unconnected or has no load
+WARNING: [Synth 8-7129] Port din[6] in module serial is either unconnected or has no load
+WARNING: [Synth 8-7129] Port din[5] in module serial is either unconnected or has no load
+WARNING: [Synth 8-7129] Port din[4] in module serial is either unconnected or has no load
+WARNING: [Synth 8-7129] Port din[3] in module serial is either unconnected or has no load
+WARNING: [Synth 8-7129] Port din[2] in module serial is either unconnected or has no load
+WARNING: [Synth 8-7129] Port din[1] in module serial is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd in module serial is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd in module timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mmio_rd in module ppu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vram_a[15] in module ppu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vram_a[14] in module ppu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vram_a[13] in module ppu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vram_rd in module ppu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oam_a[15] in module ppu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oam_a[14] in module ppu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oam_a[13] in module ppu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oam_a[12] in module ppu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oam_a[11] in module ppu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oam_a[10] in module ppu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oam_a[9] in module ppu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oam_a[8] in module ppu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oam_rd in module ppu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imm[7] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imm[6] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imm[5] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imm[4] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imm[3] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imm[2] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imm[1] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imm[0] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cb[5] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cb[4] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cb[3] in module control is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2173.852 ; gain = 485.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2195.676 ; gain = 507.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2195.676 ; gain = 507.633
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.089 . Memory (MB): peak = 2195.676 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/PIPNP/PIPNP.srcs/constrs_1/new/contraints.xdc]
+Finished Parsing XDC File [C:/PIPNP/PIPNP.srcs/constrs_1/new/contraints.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2319.805 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 2380.074 ; gain = 692.031
+52 Infos, 156 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 2380.074 ; gain = 960.441
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 15 15:41:15 2022...

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Tue Mar 29 13:46:35 2022
+# Process ID: 7852
+# Current directory: C:/PIPNP/PIPNP.runs/clk_wiz_0_synth_1
+# Command line: vivado.exe -log clk_wiz_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_wiz_0.tcl
+# Log file: C:/PIPNP/PIPNP.runs/clk_wiz_0_synth_1/clk_wiz_0.vds
+# Journal file: C:/PIPNP/PIPNP.runs/clk_wiz_0_synth_1\vivado.jou
+# Running On: DESKTOP-U31JS6B, OS: Windows, CPU Frequency: 2808 MHz, CPU Physical cores: 4, Host memory: 17021 MB
+#-----------------------------------------------------------
+source clk_wiz_0.tcl -notrace

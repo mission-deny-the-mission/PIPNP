@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Tue Feb 22 15:14:06 2022
+# Process ID: 3380
+# Current directory: C:/PIPNP
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4628 C:\PIPNP\PIPNP.xpr
+# Log file: C:/PIPNP/vivado.log
+# Journal file: C:/PIPNP\vivado.jou
+# Running On: DESKTOP-U31JS6B, OS: Windows, CPU Frequency: 2808 MHz, CPU Physical cores: 4, Host memory: 17021 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/PIPNP/PIPNP.xpr
+update_compile_order -fileset sources_1
